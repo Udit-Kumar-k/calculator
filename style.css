@@ -1,0 +1,62 @@
+ body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #01161e;
+      margin: 0;
+    }
+    .calculator {
+      background: #124559;
+      padding: 12px;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .display {
+      width: 270px;
+      height: 60px;
+      font-size: 22px;
+      text-align: right;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #aec3b0;
+      color: #01161e;
+      box-sizing: border-box;
+      overflow-x: auto;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
+    }
+    button {
+      padding: 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background: #eff6e0;
+      color: #01161e;
+      cursor: pointer;
+      transition: transform 0.1s ease, background 0.2s ease;
+    }
+    button:hover, button.operator:hover, button.equal:hover, button.dot:hover, button.clear:hover, button.back:hover{
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    button:active, button.operator:active, button.equal:active, button.dot:active, button.clear:active, button.back:active{
+    transform: scale(0.95);
+    }
+    button.operator {
+      background: #598392;
+      color: white;
+    }
+    button.equal {
+      background: #43a047;
+      color: white;
+      grid-column: span 3;
+    }
+    button.clear { background: #e53935; color: white; }
+    button.back { background: #598392; color: white; }
+    button.dot { background: #598392; color: white; }
